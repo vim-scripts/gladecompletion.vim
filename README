@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2273
+
+WHAT IS IT?  Provides an Insert mode completion function which completes names
+from a .glade file as produced by the Glade UI designer.
+http://glade.gnome.org/
+
+HOW DOES IT WORK?  The plugin defines a function which scans .glade files in
+current buffer's current directory.  The function adds Gtk objects and event
+handlers to the insert mode completion menu
+
+The menu is invoked by pressing <C-x><C-u> in insert mode.  Read all about it
+at |i_CTRL-X_CTRL-U|.
+
+Each time the completion function is invoked, it looks at the .glade files in
+the current directory and compares the filesystem's modification timestamp
+with the timestamp value from the previous invocation.  Thus, if you
+add/change a widget in Glade and save the file, those changes are reflected
+immediately in Vim.
+
+
